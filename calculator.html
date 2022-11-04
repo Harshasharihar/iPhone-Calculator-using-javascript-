@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="calc.css">
+</head>
+<body>
+    <div class="container flex ">
+        
+        <div class="border">
+            <div id="disp" class="display">
+                <h1 class="flex"></h1>
+            </div>
+            <div class="row">
+                <button id="clear" class="operator-calc flex">
+                    AC
+                </button>
+                <button id="change-sign" class="operator-calc flex">
+                    +/-
+                </button>
+                <button id="percent" class="operator-calc flex">
+                    %
+                </button>
+                <button id="quot" class="operators flex ">
+                    /
+                </button>
+            </div>
+            
+            <div class="row">
+                <button id="seven" class="operator-calc flex">
+                    7
+                </button>
+                <button id="eight" class="operator-calc flex">
+                    8
+                </button>
+                <button id="nine" class="operator-calc flex">
+                    9
+                </button>
+                <button id="prod" class="operators flex ">
+                    *
+                </button>
+            </div>
+            
+            <div class="row">
+                <button id="four" class="operator-calc flex">
+                    4
+                </button>
+                <button id="five" class="operator-calc flex">
+                    5
+                </button>
+                <button id="six" class="operator-calc flex">
+                    6
+                </button>
+                <button id="sub" class="operators flex ">
+                    -
+                </button>
+            </div>
+            
+            <div class="row">
+                <button id="one" class="operator-calc flex">
+                    1
+                </button>
+                <button id="two" class="operator-calc flex">
+                    2
+                </button>
+                <button id="three" class="operator-calc flex">
+                    3
+                </button>
+                <button id="add" class="operators flex ">
+                    +
+                </button>
+            </div>
+            <div class="row">
+                <button id="zero" class="operator-calc flex zero">
+                    0
+                </button>
+                <button id="dot" class="operator-calc flex">
+                    .
+                </button>
+                <button id="eql" class="operators flex ">
+                    =
+                </button>
+            </div>
+    
+    </div>
+    
+    <div class="iphone">
+        <h1 class="ip">iPhone Calculator</h1>
+    </div>
+    
+    <script>
+        let equals = 0
+        let button_zero=document.querySelector("#zero")
+        let button_one=document.querySelector("#one")
+        let button_two=document.querySelector("#two")
+        let button_three=document.querySelector("#three")
+        let button_four=document.querySelector("#four")
+        let button_five=document.querySelector("#five")
+        let button_six=document.querySelector("#six")
+        let button_seven=document.querySelector("#seven")
+        let button_eight=document.querySelector("#eight")
+        let button_nine=document.querySelector("#nine")
+        let button_add=document.querySelector("#add")
+        let button_sub=document.querySelector("#sub")
+        let button_prod=document.querySelector("#prod")
+        let button_div=document.querySelector("#quot")
+        let button_eql=document.querySelector("#eql")
+        let button_dot=document.querySelector("#dot")
+        let button_clear=document.querySelector("#clear")
+
+        let h1 = document.querySelector("h1")
+
+        button_clear.onclick = clear
+        button_eql.onclick = equal
+        button_zero.onclick = zero
+        button_one.onclick = one
+        button_two.onclick = two
+        button_three.onclick = three
+        button_four.onclick = four
+        button_six.onclick = six
+        button_five.onclick = five
+        button_seven.onclick = seven
+        button_eight.onclick = eight
+        button_nine.onclick = nine        
+        button_add.onclick = add
+        button_sub.onclick = sub
+        button_prod.onclick = prod
+        button_div.onclick = quot
+        button_dot.onclick = dot
+        
+        function add(){
+            h1.innerHTML=h1.innerHTML+`${button_add.innerHTML}`
+            console.log(h1.innerHTML)
+
+        }
+        function sub(){
+            h1.innerHTML=h1.innerHTML+`${button_sub.innerHTML}`
+            console.log(h1.innerHTML)
+
+        }
+        function prod(){
+            h1.innerHTML=h1.innerHTML+`${button_prod.innerHTML}`
+            console.log(h1.innerHTML)
+
+        }
+        function quot(){
+            h1.innerHTML=h1.innerHTML+`${button_div.innerHTML}`
+            console.log(h1.innerHTML)
+
+        }
+        function dot(){
+            h1.innerHTML=h1.innerHTML+`${button_dot.innerHTML}`
+            console.log(h1.innerHTML)
+
+        }
+        function zero(){
+            h1.innerHTML=h1.innerHTML+`${button_zero.innerHTML}`
+            console.log(h1.innerHTML)
+        }
+        
+        function one(){
+            h1.innerHTML=h1.innerHTML+`${button_one.innerHTML}`
+            console.log(h1.innerHTML)
+        }
+
+        function two(){
+            h1.innerHTML=h1.innerHTML+`${button_two.innerHTML}`
+            console.log(h1.innerHTML)
+        }
+        
+        function three(){
+            h1.innerHTML=h1.innerHTML+`${button_three.innerHTML}`
+            console.log(h1.innerHTML)
+        }
+        
+        function four(){
+            h1.innerHTML=h1.innerHTML+`${button_four.innerHTML}`
+            console.log(h1.innerHTML)
+        }
+        
+        function five(){
+            h1.innerHTML=h1.innerHTML+`${button_five.innerHTML}`
+            console.log(h1.innerHTML)
+        }
+        
+        function six(){
+            h1.innerHTML=h1.innerHTML+`${button_six.innerHTML}`
+            console.log(h1.innerHTML)
+        }
+
+        
+        function seven(){
+            h1.innerHTML=h1.innerHTML+`${button_seven.innerHTML}`
+            console.log(h1.innerHTML)
+        }
+        
+        function eight(){
+            h1.innerHTML=h1.innerHTML+`${button_eight.innerHTML}`
+            console.log(h1.innerHTML)
+        }
+        
+        function nine(){
+            h1.innerHTML=h1.innerHTML+`${button_nine.innerHTML}`
+            console.log(h1.innerHTML)
+        }
+        function equal(){
+            let val = h1.innerHTML
+            console.log(val)
+            let asn = eval(val)
+            console.log(asn)
+            h1.innerHTML=`${asn}`
+
+            console.log(h1.innerHTML)
+
+        }
+
+        function clear(){
+            h1.innerHTML=``
+            console.log(h1.innerHTML)
+
+        }
+
+    </script>
+</body>
+</html>
